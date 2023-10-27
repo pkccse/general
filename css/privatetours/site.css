@@ -1,0 +1,537 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/*Fonts css*/
+
+h1 {
+    font-family: 'Ubuntu Medium';
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Ubuntu';
+}
+
+a {
+    font-family: 'Ubuntu Light';
+    color: #019517;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: rgb(133, 169, 4);
+    }
+
+p,
+h6 {
+    font-family: 'Ubuntu Light';
+    text-align: justify;
+}
+
+.carousel-caption p {
+    text-align: center;
+}
+
+.sort-banner {
+    height: 350px;
+}
+
+/*Fonts css ends*/
+.main-banner {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+footer {
+    background-image: url(../images/footer/footer_gal.webp);
+    height: 400px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-position: center;
+}
+
+.top {
+    background-color: #00000099;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+
+/* Custom CSS for the Navbar */
+
+.custom-navbar .nav-link {
+    color: black !important;
+    /* Black text color */
+    font-family: Ubuntu Medium !important;
+}
+
+    .custom-navbar .nav-link:hover {
+        color: rgb(133, 169, 4) !important;
+        /* Green text color on hover */
+        transition: color 0.4s ease;
+        /* Smooth transition effect */
+    }
+
+.dropdown-item:hover {
+    background-color: rgb(133, 169, 4) !important;
+    transition: color 0.4s ease !important;
+}
+
+.custom-navbar .navbar-brand {
+    margin-right: auto;
+    /* Pushes the brand/logo to the left */
+}
+
+.dropdown-menu {
+    border-radius: 0.5rem !important;
+}
+
+.back-light {
+    background-color: #15141466;
+    border-radius: 0.5rem;
+}
+
+
+/* Style for the sticky header */
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow for the header */
+    z-index: 1000;
+    /* Make sure it's above other content */
+    transition: color 0.4s ease;
+    /* Smooth transition effect */
+}
+
+
+/*Overridden css*/
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-color: #ffffffcf !important;
+}
+
+
+/*Overridden css ends*/
+
+
+/*3D CARDS*/
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+    .container .box .body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: 0.9s ease;
+    }
+
+        .container .box .body .imgContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            /*For text in image card*/
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+            .container .box .body .imgContainer .centered-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #00000075;
+                padding: 5px 15px 5px 15px;
+                border-radius: 1rem;
+            }
+
+            .container .box .body .imgContainer img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+
+        .container .box .body .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            border-radius: 1rem;
+        }
+
+    .container .box:hover .body {
+        transform: rotateY(180deg);
+    }
+
+    .container .box .body .content div {
+        transform-style: preserve-3d;
+        padding: 20px;
+        background: linear-gradient(45deg, #749e00, #FFEB3B);
+        transform: translateZ(100px);
+        border-radius: 1rem;
+    }
+
+        .container .box .body .content div h3 {
+            letter-spacing: 1px;
+        }
+
+
+/*3D Cards ends*/
+
+
+/*Social/Contact icons*/
+
+.float-right {
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    text-align: center;
+    z-index: 100;
+}
+
+.float-left {
+    position: fixed;
+    bottom: 5px;
+    left: 15px;
+    text-align: center;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+
+/*Social/contact icons ends*/
+
+
+/*Animesta*/
+
+.bounce-in-top {
+    -webkit-animation: bounce-in-top 1.1s both;
+    animation: bounce-in-top 1.1s both;
+}
+
+@-webkit-keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/*Animesta Ends*/
+
+.zoom {
+    transition: transform .3s;
+    /* Animation */
+}
+
+    .zoom:hover {
+        transform: scale(1.15);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+.headline {
+    padding-bottom: 15px;
+}
+
+    .headline p {
+        display: inline;
+        vertical-align: top;
+        color: black;
+    }
+
+    .headline h1 {
+        display: inline;
+        vertical-align: top;
+        color: rgb(133, 169, 4);
+    }
+
+.golden-traingle {
+    background-image: url(../images/background/worldback.gif);
+    background-position: center;
+    background-size: cover;
+    padding: 15px;
+    text-align: center;
+}
+
+.gt-header p {
+    display: inline;
+    vertical-align: top;
+    color: black;
+}
+
+.gt-header h2 {
+    display: inline;
+    vertical-align: top;
+    color: rgb(133, 169, 4);
+}
+
+.eye-tone {
+    background-color: #f2f2f2;
+}
+
+.my-cars {
+    padding: 25px;
+}
+
+    .my-cars .gt-header {
+        text-align: center;
+    }
+
+    .my-cars img {
+        width: -webkit-fill-available;
+        max-height: 110px;
+        border-radius: .2rem;
+    }
+
+/*Card Customization*/
+.card-header {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    background-color: #f9c03a;
+    border-bottom: 0;
+}
+
+.card {
+    border-radius: 1rem !important;
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.card-footer {
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+    background-color: #fdfdfd;
+    border-top: 0;
+}
+
+/*Card Customization Ends*/
+
+.trust {
+    padding: 20px;
+    background-color: #f9c03a;
+}
+
+.best-tours {
+    background-image: linear-gradient(rgb(253 253 253 / 80%), rgb(0 0 0 / 80%)), url(../images/background/back.jpg);
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+    .best-tours row .card-img, .card-img-top {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+.sort-gallery p {
+    color: white;
+}
+
+.sort-gallery h6 {
+    color: white;
+}
+
+.galary-img {
+    border-radius: 1rem;
+    width: 230px;
+    background-color: transparent;
+    border: 0;
+}
+
+.center-col {
+    text-align: -webkit-center;
+}
+
+.not-found {
+    background-image: url(../images/background/worldback.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+    .not-found h1 {
+        color: orange;
+        font-size: 150px;
+    }
+
+    .not-found .info {
+        color: #85a904;
+    }
+
+    .not-found .logo {
+        width: 35%;
+        padding: 20px 10px 30px 10px;
+    }
+
+img.no-drag {
+    pointer-events: none;
+}
